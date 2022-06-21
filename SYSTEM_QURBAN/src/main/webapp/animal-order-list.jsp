@@ -34,7 +34,7 @@
 			<hr>
 			<div class="container text-left">
 
-				<a href="<%=request.getContextPath()%>/new" class="btn btn-success">Tambah Tempahan Baru</a>
+		<%--		<a href="<%=request.getContextPath()%>/new" class="btn btn-success">Tambah Tempahan Baru</a>  --%>
 			</div>
 			<br>
 			<table class="table table-bordered">
