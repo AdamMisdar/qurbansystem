@@ -1,6 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+	//user has not logged in
+	if(session.getAttribute("name")==null) {
+		
+		//redirect user to login page
+		response.sendRedirect("login.jsp");
+		
+	}
+
+%>
 <html>
 <head>
 <title>Tambah Tempahan Haiwan</title>
@@ -15,12 +25,14 @@
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: rgb(0,87,46)">
 			<div>
-				<a href="https://www.javaguides.net" class="navbar-brand"> Tempahan Haiwan </a>
+				<a href="#" class="navbar-brand"> Tempahan Haiwan </a>
 			</div>
 
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Senarai Tempahan Haiwan</a></li>
+				<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
+					class="nav-link py-3 px-0 px-lg-3 rounded" href="#"><%= session.getAttribute("name") %></a></li>
 			</ul>
 		</nav>
 	</header>

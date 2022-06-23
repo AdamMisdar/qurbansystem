@@ -152,3 +152,15 @@ button{
 .button:hover::before{
     transform :translate(-3px,-3px);
 }
+
+.user-name {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-direction: column;
+	background-color: red;
+	color: red;
+	
+} 
+
