@@ -57,7 +57,8 @@ public class Login_Servlet extends HttpServlet {
 				session.setAttribute("name", result.getString("client_name"));
 				
 				//request dispatcher - if login successful
-				dispatcher = request.getRequestDispatcher("animal-order-list.jsp");
+				response.sendRedirect(request.getContextPath() + "/list");
+				//dispatcher = request.getRequestDispatcher("animal-order-list.jsp");
 			}
 			else {
 				request.setAttribute("status", "failed");

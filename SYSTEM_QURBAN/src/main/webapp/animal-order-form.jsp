@@ -31,15 +31,27 @@
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Senarai Tempahan Haiwan</a></li>
-				<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-					class="nav-link py-3 px-0 px-lg-3 rounded" href="#"><%= session.getAttribute("name") %></a></li>
 			</ul>
+			<div>
+				<a style="color: white; width: 200px; position: fixed; top: 0; right: 0; margin-top: 10px; margin-right: 5px;
+				padding: 3px; text-align: center; font-weight: 500; border: solid 1px white; border-radius: 10px; overflow: hidden">
+				<%= session.getAttribute("name") %></a> 		
+			</div>
 		</nav>
 	</header>
 	<br>
 	<div class="container col-md-5">
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body" style="
+			  		position:absolute;
+    				display: block;
+   					align-items: center;
+   				 	justify-content: center;
+    				margin: 30px 60px 10px 50px;
+    				padding: auto;
+    				height: auto;
+    				width: 60vh;">
+    				
 				<c:if test="${animalOrder != null}">
 					<form action="update" method="post">
 				</c:if>
@@ -48,7 +60,7 @@
 				</c:if>
 
 				<caption>
-					<h2>
+					<h2 style="margin: 5px;">
 						<c:if test="${animalOrder != null}">
             			Ubah Tempahan Haiwan
             		</c:if>
